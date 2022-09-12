@@ -19,3 +19,11 @@ print(type([1, 2, 3]))           # List
 print(type({'name':'Asabeneh'})) # Dictionary
 print(type({9.8, 3.14, 2.7}))    # Set
 print(type((9.8, 3.14, 2.7)))    # Tuple
+
+print("   AND")
+print("----------")
+print("0 0 | "+str(0 and 0))
+print("0 1 | "+str(0 and 1))
+print("1 0 | "+str(1 and 0))
+print("1 1 | "+str(1 and 1))
+print("")

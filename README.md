@@ -2,4 +2,5 @@
 
 - una cosa
 - dos cosas
-[http://www.as.com](as.com)
+[
+[as.com](http://www.as.com)

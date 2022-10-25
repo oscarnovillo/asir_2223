@@ -12,6 +12,14 @@ nombre = nombreCosa.upper()
 nombre = 8
 nombre = str(nombre) + " es un nombre de mierda"
 
+a=8
+b=9
+swap = a
+a=b
+b=swap
+
+a,b=b,a
+
 numero = 1
 decimal = 1.8
 

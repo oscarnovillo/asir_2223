@@ -1,0 +1,11 @@
+<persona>
+<name>John Doe</name>
+<age>25</age>
+<address>
+    <street>123 Main Street</street>
+    <city>Anytown</city>
+    <state>CA</state>
+    <zip>12345</zip>
+</address>
+</persona>
+

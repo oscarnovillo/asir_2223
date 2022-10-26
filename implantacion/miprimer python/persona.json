@@ -1,0 +1,20 @@
+{
+    "nombre" : "Juan",
+    "apellido" : "Perez",
+    "edad" : 25,
+    "direccion" : {
+        "calle" : "Av. Siempreviva",
+        "numero" : 742,
+        "ciudad" : "Springfield"
+    },
+    "hijos" : [
+        {
+            "nombre" : "Bart",
+            "edad" : 10
+        },
+        {
+            "nombre" : "Lisa",
+            "edad" : 8
+        }
+    ]
+}

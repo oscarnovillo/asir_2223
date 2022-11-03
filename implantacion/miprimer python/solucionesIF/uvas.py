@@ -11,7 +11,14 @@ if tipoUva == "a":
     elif tamañoUva == "2":
         precioKiloFinal = 90
 elif tipoUva == "b":
-    print("b")
+    if tamañoUva == "1":
+        precioKiloIncial = 3
+    elif tamañoUva == "2":
+        precioKiloFinal = 90
+
+
+
+
 
 
 año = 2020

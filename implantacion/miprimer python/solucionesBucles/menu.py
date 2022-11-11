@@ -15,6 +15,9 @@ while opcion!=5:
         opcionString =input("¿Que opcion desea? ") 
         if (opcionString.isdigit()):
             opcion = int(opcionString)
+        else:
+            print("Error, no es un numero")
+
 
 
     if (opcion == 1):

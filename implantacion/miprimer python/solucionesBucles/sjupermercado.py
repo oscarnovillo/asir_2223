@@ -11,9 +11,9 @@ if (dia != "domingo"):
     #pedir cantidad producto
     cantidadProducto = int(input("¿Cuantos productos quieres comprar? "))
     #pedir nombre producto1
-    nombreProducto1 = float(input("¿Cual es el precio del producto? "))
+    nombreProducto1 = float(input("¿Cual es el precio del producto 2? "))
     #pedir cantidad producto2
-    cantidadProducto2 = int(input("¿Cuantos productos quieres comprar? "))
+    cantidadProducto2 = int(input("¿Cuantos productos quieres comprar 2? "))
     descuento = 1
     #calcular precio producto
     if (nombreProducto == "leche"):
@@ -36,7 +36,7 @@ if (dia != "domingo"):
     if (nombre == "carlos"):
         if (nombreProducto=="leche") or (nombreProducto=="pan"):
             descuento -= 0.1
-    else (nombre == "mrMuro"):
+    elif (nombre == "mrMuro"):
         descuento = 1.5
 
     #calcular precio total

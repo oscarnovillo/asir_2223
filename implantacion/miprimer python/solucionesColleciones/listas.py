@@ -18,7 +18,7 @@ personas = ["Juan", 3, "kk", 91888, ["Jose", "Ana"], "Luis", "Miguel", "Rosa", "
 personas[0] = "Nuevo"
 
 tupla = (1,2,3,4,5,6,7,8,9,10)
-tupla[0] = 100
+
 
 listaTupla = list(tupla)
 noModificable = tuple(productos)

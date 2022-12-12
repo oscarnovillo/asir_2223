@@ -1,14 +1,22 @@
 from random import randint
+from clases.Jugador import Jugador
+
+
 
 TEXTO_TURNO = "Turno de %s"
 
-nombresJugadores = ["", ""]
-nombresJugadores[0] = input("Nombre del jugador 1: ")
-nombresJugadores[1] = input("Nombre del jugador 2: ")
 
-puntosJugador = [0,0]
-puntosJugador1 = 0
-puntosJugador2 = 0
+nombreJugador = input("Nombre del jugador 1: ")
+apellidoJugador = input("Apellido del jugador 1: ")
+jugador1 = Jugador(nombreJugador,apellidoJugador)
+nombreJugador = input("Nombre del jugador 2: ")
+jugador2 = Jugador(nombreJugador,"gomez")
+
+jugadores = [jugador1,jugador2]
+
+
+print(jugadores[0])
+
 
 turnoJugador = 0
 
@@ -22,28 +30,28 @@ else:
     print("Empieza Jugador 2")
     turnoJugador = 1
 
-while puntosJugador[0] < 3 and puntosJugador[1] < 3:
+while jugadores[0].puntos < 3 and jugadores[1].puntos < 3:
     dosDado = randint(2,12)
     print("El resultado de los dados es: ",dosDado)
 
-    print("turno jugador "+nombresJugadores[turnoJugador])
+    print("turno jugador "+str(jugadores[turnoJugador]))
 
     eleccionJugador = input("¿ que eliges par o  impar? ")
     ##turno jugador
     if eleccionJugador == "par" and (dosDado % 2) ==0:
-        puntosJugador[turnoJugador] += 1
-        print("Punto para",nombresJugadores[turnoJugador])
+        jugadores[turnoJugador].puntos += 1
+        print("Punto para",jugadores[turnoJugador].nombre)
     elif eleccionJugador == "impar" and (dosDado % 2) ==1:
-        puntosJugador[turnoJugador] += 1
-        print("Punto para",nombresJugadores[turnoJugador])
+        jugadores[turnoJugador].puntos += 1
+        print("Punto para",jugadores[turnoJugador].nombre)
     else:
-        puntosJugador[(turnoJugador+1)%2] += 1
-        print("Punto para",nombresJugadores[(turnoJugador+1)%2])
+        jugadores[(turnoJugador+1)%2].puntos += 1
+        print("Punto para",jugadores[(turnoJugador+1)%2].puntos)
 
     #cambio turno
     turnoJugador = (turnoJugador + 1) % 2
 
-if (puntosJugador[0] == 3):
+if (jugadores[0].puntos == 3):
     print("Ha ganado el jugador 1")
 else:
     print("ganador el 2")

@@ -7,7 +7,6 @@ class Carta:
         ESPADAS = 2
         COPAS = 3
         BASTOS = 4
-        TUPUTA = 5
         
     class NUMEROS(Enum):
         AS = 1

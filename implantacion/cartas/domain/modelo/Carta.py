@@ -26,4 +26,4 @@ class Carta:
         self.palo = palo
         
     def __str__(self) :
-        return "Cartita: " + str(self.valor.value) + " de " + str(self.palo.name)
+        return "Cartita: " + str(self.valor.name) + " de " + str(self.palo.name)

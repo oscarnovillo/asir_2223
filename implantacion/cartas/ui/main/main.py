@@ -1,8 +1,12 @@
-from domain.modelo.Carta import Carta
+import sys
+
+from domain.servicios.serviciosCartas import crear_baraja, mezclar_baraja
+
 
 # ejecucion cosas
-
-if ( __name__ == "__main__" ):
-    carta = Carta(1, "oros")
-    
-    print(carta)
+def main():
+    print(sys.path)
+    baraja = crear_baraja()
+    mezclar_baraja(baraja.cartas)
+    for carta in baraja.cartas:
+        print(carta)

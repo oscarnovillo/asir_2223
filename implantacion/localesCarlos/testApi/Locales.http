@@ -1,0 +1,103 @@
+POST {{host}}/api/locales
+Accept: application/json
+Content-Type: application/json
+
+{"usuario":"osc","password":"{{password}}","direccion": "alto","capital": 10,"correo": "kk"}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 409, "Response status is not 409");
+  print(response.body["id_local"])
+  print(response.contentType)
+  print(response.status)
+  print(response.headers)
+});
+%}
+
+###
+
+POST {{host}}/api/locales
+Accept: application/json
+Content-Type: application/json
+
+{"usuario":"osc","password":"{{password}}","direccion": "alto","cuota":10,"capital": 10,"correo": "kk","nombre":"local2"}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 409, "Response status is not 201");
+  print(response.body["id_local"])
+  print(response.contentType)
+  print(response.status)
+  print(response.headers)
+});
+%}
+
+###
+
+POST {{host}}/api/locales
+Accept: application/json
+Content-Type: application/json
+
+{"usuario":"osc1","password":"{{password}}","direccion": "alto","cuota":10,"capital": 10,"correo": "oscar.novillo@gmail.com","nombre":"local3"}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 201, "Response status is not 201");
+  print(response.body["id_local"])
+  print(response.contentType)
+  print(response.status)
+  print(response.headers)
+});
+%}
+
+###
+
+GET {{host}}/api/locales/38
+Accept: application/json
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+  print(response.body)
+  print(response.contentType)
+  print(response.status)
+  print(response.headers)
+});
+%}
+
+###
+
+GET {{host}}/api/locales/39
+Accept: application/json
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+  client.assert(response.body === "{}");
+});
+%}
+
+###
+
+PUT {{host}}/api/locales
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id_local": 45,
+  "direccion": "alto",
+  "cuota": 10,
+  "capital": 10,
+  "nombre": "localNuevo",
+  "codigo": "kk"
+}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 409, "Response status is not 201");
+  print(response.body["id_local"])
+  print(response.contentType)
+  print(response.status)
+  print(response.headers)
+});
+%}

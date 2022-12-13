@@ -1,0 +1,21 @@
+GET {{host}}/images/mejora.txt
+
+
+###
+
+POST {{host}}/login
+Accept: application/json
+Content-Type: application/json
+
+{"usuario":"carlos.36","password":"12345678"}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+  client.global.set(response.body["id_local"])
+  print(response.body["id_local"])
+  print(response.contentType)
+  print(response.status)
+  print(response.headers)
+});
+%}

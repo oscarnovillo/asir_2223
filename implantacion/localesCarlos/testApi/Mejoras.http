@@ -1,0 +1,48 @@
+POST http://{{host}}/api/mejoras/votar
+Content-Type: application/json
+
+{
+  "id": 17,
+  "id_local": 49,
+  "id_usuario": 93,
+  "titulo": "titutlo",
+  "descripcion": "descripcion",
+  "importe": 200.56,
+  "estado": "EN_VOTACION",
+  "votosPositivos": 1,
+  "votosNegativos": 0,
+  "voto": "SI"
+}
+
+###
+###
+POST http://{{host}}/api/mejoras
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="image"; filename="mejora.txt"
+
+< ./files/mejora.txt
+--WebAppBoundary--
+
+--WebAppBoundary
+Content-Disposition: form-data; name="mejora"
+
+{
+  "id_local": 49,
+  "id_usuario": 93,
+  "titulo": "titutlo",
+  "descripcion": "descripcion",
+  "importe": 200.56,
+  "estado":"EN_VOTACION"
+}
+--WebAppBoundary
+
+###
+
+DELETE http://{{host}}/api/mejoras?id=16
+Accept: application/json
+
+###
+GET http://{{host}}/api/mejoras?estado=APROBADAS
+Accept: application/json

@@ -1,0 +1,26 @@
+
+
+class Constantes:
+    SESSION_ID_LOCAL = "id_local"
+    SESSION_LOGIN = "login"
+    SESSION_ID_USER = "idUser"
+    SERVICE_UNAVAILABLE = "Servicio no disponible temporalmente"
+    USUARIO_EXISTENTE = "Nombre de usuario ya existente"
+    LOCAL_EXISTENTE = "Nombre de local ya existente"
+    FICHERO_EXISTENTE = "Nombre de fichero ya exsite"
+    CORREO_EXISTENTE = "Este correo ya ha sido registrado"
+    ERROR_RECIBO = "No se ha podido registrar el pago"
+    ERROR_IMAGEN = "No se ha podido guardar la imagen"
+    CODIGO_LOCAL_ERRONEO = "Código local erróneo"
+    PASSWORD_INCORRECTA = "Contraseña incorrecta"
+    USUARIO_NO_EXISTE = "Usuario no registrado"
+    COMPLETAR_CAMPOS = "Complete todos los campos"
+
+    PATH_IMG_PROFILE = "/docroot/tfc/images/"
+    URL_IMG_PROFILE = "images/"
+    PATH_JUSTIFICANTES = "/docroot/tfc/justificantes/"
+    URL_JUSTIFICANTES = "justificantes/"
+    PATH_IMG_MEJORAS = "/docroot/tfc/imgMejoras/"
+    URL_IMG_MEJORAS = "imgMejoras/"
+    PATH_IMG_EVENTOS = "/docroot/tfc/imgEventos/"
+    URL_IMG_EVENTOS = "imgEventos/"

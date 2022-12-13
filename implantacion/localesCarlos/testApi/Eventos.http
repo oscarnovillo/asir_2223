@@ -1,0 +1,25 @@
+GET {{host}}/api/eventos
+Accept: application/json
+
+###
+POST {{host}}/api/eventos
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="image"; filename="README.md"
+
+< ./files/README.md
+--WebAppBoundary--
+
+--WebAppBoundary
+Content-Disposition: form-data; name="event"
+
+{"id":0,"id_local":49,"id_usuario":50,"titulo":"titulo","descripcion":"descripcion","latitud":2.0,"longitud":5.6788,"fecha":"2020-08-08T00:01:00"}
+--WebAppBoundary
+
+###
+
+DELETE http://{{host}}/api/eventos?id=12
+Accept: application/json
+
+###

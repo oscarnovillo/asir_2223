@@ -1,0 +1,60 @@
+POST {{host}}/api/recibos
+Accept: application/json
+Content-Type: application/json
+
+{"id_recibo":0,"id_usuario": 50,"id_local": 38,"importe": 36.0,"descripcion": "test","fecha": "2020-08-08T00:01:00","id_tipo_gasto": 2, "url_pdf": "test/test.pdf"}
+
+###
+
+GET {{host}}/api/recibos?id=50
+Accept: application/json
+
+###
+
+DELETE {{host}}/api/recibos?id=94
+Accept: application/json
+
+###
+
+GET {{host}}/api/recibos/recibosLocal
+Accept: application/json
+
+> {%
+client.test("Request executed successfully", function() {
+  print(response.contentType)
+  print(response.status)
+  print(response.headers)
+});
+%}
+
+###
+
+GET {{host}}/api/recibos/recibosUtils
+Accept: application/json
+
+###
+
+POST http://{{host}}/api/recibos/recibosUtils
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="recibo"; filename="recibo.txt"
+
+< /home/kearone/Documentos/recibo.txt
+--WebAppBoundary--
+
+--WebAppBoundary
+Content-Disposition: form-data; name="objectRecibo"
+
+{
+  "id_recibo": 93,
+  "id_usuario": 38,
+  "id_local": 50,
+  "importe": 36.0,
+  "descripcion": "test",
+  "fecha": "2020-07-07T00:01:00",
+  "id_tipo_gasto": 2,
+  "url_pdf": ""
+}
+
+

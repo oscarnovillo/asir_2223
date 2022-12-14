@@ -1,12 +1,11 @@
 from enum import Enum
 
-
 class Carta:
     class PALOS(Enum):
-        OROS = 1
-        ESPADAS = 2
-        COPAS = 3
-        BASTOS = 4
+        OROS = 0
+        ESPADAS = 1
+        COPAS = 2
+        BASTOS = 3
         
     class NUMEROS(Enum):
         AS = 1
@@ -16,9 +15,12 @@ class Carta:
         CINCO = 5
         SEIS = 6
         SIETE = 7
-        SOTA = 10
-        CABALLO = 11
-        REY = 12    
+        OCHO = 8
+        NUEVE = 9
+        DIEZ = 10
+        JOTA = 11
+        DAMA = 12
+        REY = 13   
 
     def __init__(self, valor : NUMEROS, palo:PALOS):
         self.valor = valor
@@ -26,3 +28,5 @@ class Carta:
         
     def __str__(self) :
         return "Cartita: " + str(self.valor.name) + " de " + str(self.palo.name)
+
+

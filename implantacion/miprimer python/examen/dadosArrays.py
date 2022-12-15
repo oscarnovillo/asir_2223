@@ -9,6 +9,7 @@ TEXTO_TURNO = "Turno de %s"
 nombreJugador = input("Nombre del jugador 1: ")
 apellidoJugador = input("Apellido del jugador 1: ")
 jugador1 = Jugador(nombreJugador,apellidoJugador)
+jugador1.nombreCompleto
 nombreJugador = input("Nombre del jugador 2: ")
 jugador2 = Jugador(nombreJugador,"gomez")
 

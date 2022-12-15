@@ -11,8 +11,8 @@ class ServiciosCartas:
                 baraja.cartas.append(Carta(numero, palo))
         return baraja
 
-    def mezclar_baraja(self,baraja):
-        shuffle(baraja)
+    def mezclar_baraja(self,baraja : Baraja):
+        shuffle(baraja.cartas)
     
 
 

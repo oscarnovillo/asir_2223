@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 
 
-@dataclass(order=True)
+@dataclass()
 class Carta:
     
     
@@ -24,10 +24,8 @@ class Carta:
         CABALLO = 11
         REY = 12
 
-    sorted_by = "valor.value"
+    #sort_index: int = field(init=False, repr=False)
+   
     valor :NUMEROS
     palo : PALOS
 
-
-    def __str__(self) :
-        return "Cartita: " + str(self.valor.value) + " de " + str(self.palo.name)

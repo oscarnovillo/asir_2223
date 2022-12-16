@@ -1,5 +1,5 @@
+from dataclasses import dataclass, field
 from enum import Enum
-from dataclasses import dataclass,field
 
 
 @dataclass(order=True)
@@ -7,11 +7,11 @@ class Carta:
     
     
     class PALOS(Enum):
-        OROS = 1
-        ESPADAS = 2
-        COPAS = 3
-        BASTOS = 4
-
+        OROS = 0
+        ESPADAS = 1
+        COPAS = 2
+        BASTOS = 3
+        
     class NUMEROS(Enum):
         AS = 1
         DOS = 2

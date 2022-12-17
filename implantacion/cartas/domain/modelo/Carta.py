@@ -5,7 +5,7 @@ from enum import Enum
 @dataclass()
 class Carta:
     
-    
+    """ esto es un comentario de la clase"""
     class PALOS(Enum):
         OROS = 0
         ESPADAS = 1

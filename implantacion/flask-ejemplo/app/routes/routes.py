@@ -1,8 +1,7 @@
 from flask import Blueprint, render_template, request
 
-from app.servicios.userServicios import UserServicios
 from app import db
-
+from app.servicios.userServicios import UserServicios
 
 bp = Blueprint('routes', __name__)
 

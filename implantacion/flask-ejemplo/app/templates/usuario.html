@@ -7,15 +7,13 @@
     </head>
 <body>
     <h1>Members</h1>
-    <ul>
-    {% for user in usuarios %}
-      <li>{{ user.username }} 
-        {% if user.motos.__len__() > 0%}
-            {{ user.motos[0].nombre }}
-        {% endif %}
+        {{user.id}}      {{ user.username }}
+      
+      <ul>
+        {% for moto in  user.motos %}
+          <li>{{ moto.nombre}} </li>
+        {% endfor %}
+        </ul>
     
-       </li>
-    {% endfor %}
-    </ul>
 
 </html>

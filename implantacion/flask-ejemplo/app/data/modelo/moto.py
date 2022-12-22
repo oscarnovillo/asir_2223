@@ -5,6 +5,7 @@ from sqlalchemy.orm import relationship
 
 from app.data.modelo import Base
 
+
 class Moto(Base):
     __tablename__ = 'motos'
 
@@ -13,4 +14,4 @@ class Moto(Base):
     user_id = Column(Integer, ForeignKey("users.id"))
 
     
-   # user = relationship("User", back_populates="motos")
+ 

@@ -1,0 +1,5 @@
+baseURL = 'http://example.org/'
+languageCode = 'es-es'
+title = 'Hugo Site'
+theme = 'ananke'
+disqusShortname = 'osneirecar'

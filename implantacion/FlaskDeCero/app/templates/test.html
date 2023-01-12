@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Test{% endblock %}
+
+
+{% block content %}
+    {% for equipo in equipos %}
+        <p>{{ equipo.nombre }}</p>
+    {% endfor %}
+    <p class="important">
+      HOLA DESDE TEST
+    </p>
+{% endblock %}

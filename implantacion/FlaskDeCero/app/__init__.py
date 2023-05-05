@@ -23,6 +23,6 @@ def create_app():
 
     from .routes import routes
 
-    app.register_blueprint(routes.rutas_usuarios)
+    app.register_blueprint(routes.rutas_coches)
 
     return app

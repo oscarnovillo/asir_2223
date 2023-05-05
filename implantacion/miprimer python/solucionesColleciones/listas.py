@@ -1,3 +1,4 @@
+import random 
 producto1 = "datil"
 producto2 = "manzana"
 producto3 = "pera"
@@ -9,6 +10,10 @@ producto8 = "naranja"
 producto9 = "mandarina"
 producto10 = "platano"
 
+ 
+cromos = [  random.randint(1, 100) for _ in range(1, 20)]
+
+print(cromos)
 
 # Crear una lista
 productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10]
@@ -33,3 +38,4 @@ set = {1,2,3,4,5,1,1,1,6,7,8,9,10}
 # Diccionario
 personasFrutas = {"juan" : "melon","pedro": "piña"}
 print(personasFrutas["juan"])
+

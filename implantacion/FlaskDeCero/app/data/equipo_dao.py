@@ -13,3 +13,29 @@ class EquipoDao:
 
         cursor.close()
         return equipos
+
+    def insert(self,db,nombre,ciudad):
+        cursor = db.cursor()
+        sql = ("INSERT INTO equipos (nombre,ciudad) values (%s,%s) ")
+        data = (nombre,ciudad)
+        cursor.execute(sql, data)
+        db.commit()
+
+    def delete(self,db,id):
+        cursor = db.cursor()
+        sql = ("delete from equipos where id = %s ")
+        data = [id]
+        cursor.execute(sql, data)
+        db.commit()
+    def update(self,db,id,nombre,ciudad):
+        cursor = db.cursor()
+        sql = ("update equipos set nombre = %s, ciudad = %s where id = %s ")
+        data = [nombre,ciudad,id]
+        cursor.execute(sql, data)
+        db.commit()       
+    def updateNombre(self,db,id,nombre):
+        cursor = db.cursor()
+        sql = ("update equipos set nombre = %s where id = %s ")
+        data = [nombre,id]
+        cursor.execute(sql, data)
+        db.commit()           

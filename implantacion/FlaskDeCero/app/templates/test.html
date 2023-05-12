@@ -3,10 +3,66 @@
 
 
 {% block content %}
+   <table border="1">
+    <tr><td>ID</td><td>NOMBRE</td><td>CIUDAD</td></tr>
     {% for equipo in equipos %}
-        <p>{{ equipo.nombre }}</p>
+       
+          
+        <tr>
+          <td>{{ equipo.id }}</td> 
+          <td>{{ equipo.nombre }}</td> 
+          <td>{{ equipo.ciudad }}</td>
+          <td><form action="/delEquipo"  method="post">
+            <input type="hidden" name="id" value="{{equipo.id}}" />
+            <input type="submit" value="Borrar" />
+          </form></td>
+        </tr>
+       
     {% endfor %}
-    <p class="important">
-      HOLA DESDE TEST
-    </p>
+  </table>
+<br/>
+<div style="border: 1px;">
+  <form action="/addEquipo"  method="post">
+    <label
+      for="nombre">Nombre</label>
+    <input type="text" name="tuputamadre" id="" value="" />
+    <label
+      for="ciudad">Ciudad</label>
+    <input type="text" name="ciudad" value="" />
+    <input type="submit" value="Add" />
+  </form>
+</div>
+
+<br/>
+<form action="/delEquipo"  method="post">
+  <label
+    for="nombre">ID</label>
+    <select name="id" >
+      {% for equipo in equipos %}
+        <option value="{{equipo.id}}">{{equipo.nombre}}</option>
+      {% endfor %}
+    </select>
+  <input type="submit" value="Borrar" />
+</form>
+
+<br/>
+<form action="/updateEquipo"  method="post">
+  <label
+    for="nombre">ID</label>
+  <select name="id" >
+    {% for equipo in equipos %}
+      <option value="{{equipo.id}}">{{equipo.nombre}}</option>
+    {% endfor %}
+  </select>
+  <label
+  for="nombre">Nombre</label>
+<input type="text" name="tuputamadre" id="" value="" />
+<label
+  for="ciudad">Ciudad</label>
+<input type="text" name="ciudad" value="" />
+
+  <input type="submit" value="update" />
+</form>
+
+
 {% endblock %}

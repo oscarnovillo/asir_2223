@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% load static %} <!-- esto no se hereda-->
+{% block links %}
+<link rel="stylesheet" href="{% static 'main/style.css' %}">
+{% endblock %}
+
+
+
+
+{% block content%}
+
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+    <li><a href="{% url 'main:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+<img src="{% static 'main/images/imagen.PNG' %}" alt="My image">
+
+{% endblock  %}
+

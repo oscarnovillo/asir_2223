@@ -28,6 +28,7 @@ def index_poll(request):
 class DetailView(generic.DetailView):
     model = Question
     template_name = "main/detail.html"
+    
     def get_queryset(self):
         """
         Excludes any questions that aren't published yet.

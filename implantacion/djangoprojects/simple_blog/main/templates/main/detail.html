@@ -13,5 +13,8 @@
     </fieldset>
     <input type="submit" value="Vote">
     </form>
+    <a  href="{% url 'main:question-update' question.id%}">UPDATE</a>
+    <a  href="{% url 'main:question-delete' question.id%}">BORRAR</a>
+
 
 {% endblock %}

@@ -1,0 +1,37 @@
+{%extends 'index.html'%}
+
+{%block content%}
+
+<div class="center">
+	<form method="post" novalidate class="card">
+	 	{%csrf_token %}
+	 	
+	 	<h2>Update Task</h2>
+		{% comment %} {% for field in form %}
+			{% if field.name == 'completed' %}
+				<p>
+					{{ field.label_tag }}
+					{{ field }}
+				</p>
+				{% if field.errors %}
+	        		<small class="error">{{ field.errors|striptags  }}</small> 
+	        	{% endif %}
+			{% else %}
+	    		{{ field.label_tag }} 
+	        	{{ field }}
+	        	{% if field.errors %}
+	        		<small class="error">{{ field.errors|striptags  }}</small> 
+	        	{% endif %}
+	        {% endif %}
+		{% endfor %}
+		 {% endcomment %}
+
+         {{ form.as_div }}
+		<div class="form-buttons">
+			<input type="submit" value="Save" class="btn btn-primary"/>
+			<a href="{%url 'main:index_poll'%}" class="btn btn-outline">Cancel</a>
+		</div>
+	</form>
+</div>
+
+{%endblock content%}

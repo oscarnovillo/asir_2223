@@ -13,7 +13,7 @@
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
-    <li><a href="{% url 'main:detail' question.id %}">{{ question.question_text }}</a></li>
+        <li><a href="{% url 'main:detail' question.id  %}">{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
@@ -21,6 +21,10 @@
 {% endif %}
 
 <img src="{% static 'main/images/imagen.PNG' %}" alt="My image">
+
+
+    <a  href="{% url 'main:question-create' %}">CREATE</a>
+ 
 
 {% endblock  %}
 
